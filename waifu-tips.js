@@ -165,6 +165,9 @@ function loadWidget(config) {
 			modelId = 1; // 模型 ID
 			modelTexturesId = 53; // 材质 ID
 		}
+		// Parameter Fixed -> Tia/Knight
+		modelId = 2;
+		modelTexturesId = 23;
 		loadModel(modelId, modelTexturesId);
 		fetch(waifuPath)
 			.then(response => response.json())
