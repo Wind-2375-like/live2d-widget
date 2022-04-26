@@ -13,7 +13,7 @@
 		"text": ["Don't leave me QAQ...", "Wanna see my sister?", "Wanna another Kanbanmusume?"]
 	}, {
 		"selector": "#waifu-tool .fa-street-view",
-		"text": ["喜欢换装 PLAY 吗？", "这次要扮演什么呢？", "变装！", "让我们看看接下来会发生什么！"]
+		"text": ["Do u like dress up PLAY?", "What to play this time?", "Let's see what happens next!"]
 	}, {
 		"selector": "#waifu-tool .fa-camera-retro",
 		"text": ["Wanna take a photo of me?"]
