@@ -76,7 +76,15 @@
 		"text": ["GitHub！我是新手！", "PHP 是最好的语言！"]
 	}, {
 		"selector": "a[href^='mailto']",
-		"text": ["邮件我会及时回复的！", "点击就可以发送邮件啦～"]
+		"text": ["I will reply to the email in time~", "Click on it to send an email~"]
+	}, {
+	}, {
+		"selector": "a[href^='https://www.linkedin.com/in/https://www.linkedin.cn/incareer/in/yiyang-feng-52972b205']",
+		"text": ["Wanna see his LinkedIn?"]
+	}, {
+	}, {
+		"selector": "a[href^='https://github.com/Wind-2375-like']",
+		"text": ["I am a newbie to Github, but he knows it (●'◡'●)", "Wanna see his Github?"]
 	}, {
 		"selector": "a[href^='/tags/']",
 		"text": ["要去看看 <span>{text}</span> 标签么？", "点它可以查看此标签下的所有文章哟！"]
