@@ -42,7 +42,7 @@ function loadWidget(config) {
 	let userAction = false,
 		userActionTimer,
 		messageTimer,
-		messageArray = ["Long time no see my friend~", "Hi~ Play with me ヾ(≧▽≦*)o", "Remember to whitelist me to Adblock (●'◡'●)"];
+		messageArray = ["Long time no see my friend~", "Hi~ Play with me ヾ(≧▽≦*)o", "Remember to whitelist me to \nAdblock (●'◡'●)"];
 	window.addEventListener("mousemove", () => userAction = true);
 	window.addEventListener("keydown", () => userAction = true);
 	setInterval(() => {
@@ -91,7 +91,7 @@ function loadWidget(config) {
 		const devtools = () => {};
 		console.log("%c", devtools);
 		devtools.toString = () => {
-			showMessage("Haha, you opened the console, do you want to see my little secret?", 6000, 9);
+			showMessage("Haha, you opened the console, do \nyou want to see my little secret?", 6000, 9);
 		};
 		window.addEventListener("visibilitychange", () => {
 			if (!document.hidden) showMessage("Wow, you're finally back~", 6000, 9);
@@ -102,14 +102,14 @@ function loadWidget(config) {
 		let text;
 		if (location.pathname === "/") { // 如果是主页
 			const now = new Date().getHours();
-			if (now > 5 && now <= 7) text = "Good morning~ A good day is about to begin~";
-			else if (now > 7 && now <= 11) text = "Do not sit still~ Get up and walk around more~";
-			else if (now > 11 && now <= 13) text = "It's been a long morning at work, and now it's lunchtime!";
-			else if (now > 13 && now <= 17) text = "It's easy to get sleepy in the afternoon, so hang in there!";
-			else if (now > 17 && now <= 19) text = "It's evening~ The view of the sunset outside the window is very beautiful~";
-			else if (now > 19 && now <= 21) text = "Good evening~ how are you doing today?";
-			else if (now > 21 && now <= 23) text = ["Take care of your eyes late at night~"];
-			else text = "Are you a night owl? How can you get up tomorrow if you're still up so late?";
+			if (now > 5 && now <= 7) text = "Good morning~ A good day is about \nto begin~";
+			else if (now > 7 && now <= 11) text = "Do not sit still~ Get up and walk \naround more~";
+			else if (now > 11 && now <= 13) text = "It's been a long morning at work, \nand now it's lunchtime!";
+			else if (now > 13 && now <= 17) text = "It's easy to get sleepy in the \nafternoon, so hang in there!";
+			else if (now > 17 && now <= 19) text = "It's evening~ The view of the \nsunset outside the window is very \nbeautiful~";
+			else if (now > 19 && now <= 21) text = "Good evening~ how are you doing \ntoday?";
+			else if (now > 21 && now <= 23) text = ["Take care of your eyes late at \nnight~"];
+			else text = "Are you a night owl? How can you \nget up tomorrow if you're still up \nso late?";
 		} else if (document.referrer !== "") {
 			const referrer = new URL(document.referrer),
 				domain = referrer.hostname.split(".")[1];
@@ -128,7 +128,7 @@ function loadWidget(config) {
 		fetch("https://v1.hitokoto.cn")
 			.then(response => response.json())
 			.then(result => {
-				const text = `This hitokoto is from <span>「${result.from}」</span>，which is upload to hikotoko.cn by <span>${result.creator}</span>.`;
+				const text = `This hitokoto is from <span>「${result.from}」</span>, which is upload to hikotoko.cn by <span>${result.creator}</span>.`;
 				showMessage(result.hitokoto, 6000, 9);
 				setTimeout(() => {
 					showMessage(text, 4000, 9);
